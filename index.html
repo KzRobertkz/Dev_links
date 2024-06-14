@@ -17,7 +17,7 @@
 <body>
     <div id="container">
         <div id="profile">
-            <img src="./assests/avatar.png" alt="avatar img">
+            <img src="./assets/avatar.png" alt="avatar img">
             <p>Robert Christian</p>
         </div>
         <ul>
@@ -35,7 +35,7 @@
             </li>
 
             <li>
-                <a href="https://calculatorhtmlandjs.netlify.app" target="_blank">Projeto Mais Recente</a>
+                <a href="" target="_blank" id="btn-link">Projeto Mais Recente</a>
             </li>
         </ul>
 
@@ -50,7 +50,15 @@
 
         <footer>Feito com ❤ BY Eu</footer>
     </div>
-    
+    <script>
+        const links = ["https://calculatorhtmlandjs.netlify.app","https://www.google.com.br"];
+
+        const button = document.getElementById('btn-link');
+        button.addEventListener('click', function () {
+            const numRandom = Math.floor(Math.random() * links.length);
+            window.open(links[numRandom], '_blank');
+    });
+    </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

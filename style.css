@@ -105,6 +105,6 @@ footer {
 
 @media (min-width: 700px) {
     body {
-        background-image: url(./assests/fundoPC.jpg);
+        background-image: url(./assets/fundoPC.jpg);
     }
 }
