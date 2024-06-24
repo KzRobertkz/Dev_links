@@ -33,7 +33,7 @@ body * {
     box-shadow: 0 0 0 10px #99339944,
     0 0 50px #993399,
     0 0 100px #993399;
-    animation: animação calc(40s / var(--interação)) linear infinite;
+    animation: animação calc(50s / var(--interação)) linear infinite;
 }
 
 .fundo-animado span:nth-of-type(even) {
