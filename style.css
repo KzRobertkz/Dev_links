@@ -5,16 +5,51 @@
 }
 
 body {
-    background-image: url(./assests/fundo2.jpg);
+    background-image: url(./assets/fundoGradiente.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 body * {
     font-family: "inter", sans-serif;
     font-size: 16px;
     color: white;
+}
+
+.fundo-animado {
+    position: absolute;
+    display: flex;
+}
+
+.fundo-animado span {
+    width: 17px;
+    height: 17px;
+    background: #993399;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #99339944,
+    0 0 50px #993399,
+    0 0 100px #993399;
+    animation: animação calc(40s / var(--interação)) linear infinite;
+}
+
+.fundo-animado span:nth-of-type(even) {
+    background: #2dc3ff;
+    box-shadow: 0 0 0 10px #2dc3ff44,
+    0 0 50px #2dc3ff,
+    0 0 100px #2dc3ff;
+}
+
+@keyframes animação {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-16vh) scale(1);
+    }
 }
 
 #container {
@@ -23,6 +58,7 @@ body * {
     margin: 56px, auto, 0px;
     padding: 0 24px;
     margin: auto;
+    position: relative;
 }
 
 #profile img{
@@ -105,6 +141,7 @@ footer {
 
 @media (min-width: 700px) {
     body {
-        background-image: url(./assets/fundoPC.jpg);
+        background-image: url(./assets/fundoGradiente.png);
+        
     }
 }
