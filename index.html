@@ -135,7 +135,12 @@
         button.addEventListener('click', function () {
             const numRandom = Math.floor(Math.random() * links.length);
             window.open(links[numRandom], '_blank');
-    });
+        });
+
+        document.addEventListener('touchmove', function(e) {
+            e.preventDefault(); // Impede o comportamento padrão de deslizar do navegador
+        }, { passive: false });
+
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
